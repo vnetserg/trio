@@ -14,6 +14,9 @@
 
 ```
 ./median_run.py 10 ./build/cpp data/first data/second data/first_uniq data/second_uniq data/common
+./median_run.py 10 ./build/cpp_jemalloc data/first data/second data/first_uniq data/second_uniq data/common
 ./median_run.py 10 ./build/cpp_absl data/first data/second data/first_uniq data/second_uniq data/common
+./median_run.py 10 ./build/cpp_absl_jemalloc data/first data/second data/first_uniq data/second_uniq data/common
 ./median_run.py 10 ./build/rust data/first data/second data/first_uniq data/second_uniq data/common
+./median_run.py 10 ./build/rust_jemalloc data/first data/second data/first_uniq data/second_uniq data/common
 ```

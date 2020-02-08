@@ -5,6 +5,9 @@ use std::{
     io::{BufReader, BufRead, BufWriter, Write},
 };
 
+#[global_allocator]
+static ALLOC: jemallocator::Jemalloc = jemallocator::Jemalloc;
+
 fn open_file_for_read(path: &str) -> BufReader<File> {
     let file = OpenOptions::new()
         .read(true)
