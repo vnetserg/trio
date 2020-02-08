@@ -32,4 +32,4 @@ data:
 	mkdir data
 	./generate.py data/first data/second 10000000 seed
 
-.PHONY: cpp cpp_jemalloc cpp_absl cpp_absl_jemalloc rust rust_jemalloc generate
+.PHONY: cpp cpp_jemalloc cpp_absl cpp_absl_jemalloc rust rust_jemalloc data
