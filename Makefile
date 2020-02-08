@@ -27,7 +27,7 @@ rust_jemalloc:
 	cd rust_jemalloc && cargo build --release
 	cp rust_jemalloc/target/release/rust_jemalloc build/rust_jemalloc
 
-generate:
+data:
 	@echo "This may take several minutes..."
 	mkdir data
 	./generate.py data/first data/second 10000000 seed
