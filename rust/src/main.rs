@@ -43,11 +43,14 @@ fn main() {
     let mut common_lines = HashSet::new();
     for line in second_in.split('\n' as u8).map(|line| line.unwrap()) {
         if first_lines.contains(&line) {
-            write_line(&mut common_out, &line);
             common_lines.insert(line);
         } else {
             write_line(&mut second_out, &line);
         }
+    }
+
+    for line in common_lines.iter() {
+        write_line(&mut common_out, &line);
     }
 
     for line in first_lines.iter() {

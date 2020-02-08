@@ -35,11 +35,14 @@ int main(int argc, char **argv)
     absl::flat_hash_set<std::string> common_lines;
     while (std::getline(second_in, line)) {
         if (first_lines.find(line) != first_lines.end()) {
-            write_line(&common_out, line);
             common_lines.insert(std::move(line));
         } else {
             write_line(&second_out, line);
         }
+    }
+
+    for (const auto& line : common_lines) {
+        write_line(&common_out, line);
     }
 
     for (const auto& line : first_lines) {
