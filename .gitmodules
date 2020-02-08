@@ -4,3 +4,6 @@
 [submodule "cpp_absl/abseil-cpp"]
 	path = cpp_absl/abseil-cpp
 	url = https://github.com/abseil/abseil-cpp
+[submodule "cpp_absl_jemalloc/abseil-cpp"]
+	path = cpp_absl_jemalloc/abseil-cpp
+	url = https://github.com/abseil/abseil-cpp
