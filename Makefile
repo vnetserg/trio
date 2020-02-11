@@ -1,4 +1,5 @@
-all: cpp cpp_jemalloc cpp_absl cpp_absl_jemalloc rust rust_jemalloc
+all: cpp cpp_jemalloc cpp_absl cpp_absl_jemalloc rust rust_jemalloc rust_ahash rust_ahash_jemalloc \
+	go
 
 build:
 	mkdir -p build
