@@ -35,10 +35,13 @@ rust_ahash_jemalloc:
 	cd rust_ahash_jemalloc && cargo build --release
 	cp rust_ahash_jemalloc/target/release/rust_ahash_jemalloc build/rust_ahash_jemalloc
 
+go:
+	go build -o build/go go/main.go
+
 data:
 	@echo "This may take several minutes..."
 	mkdir data
 	./generate.py data/first data/second 10000000 seed
 
 .PHONY: cpp cpp_jemalloc cpp_absl cpp_absl_jemalloc rust rust_jemalloc rust_ahash \
-	rust_ahash_jemalloc data
+	rust_ahash_jemalloc go data

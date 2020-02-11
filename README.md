@@ -13,12 +13,8 @@
 4. Measure individual binaries:
 
 ```
-./median_run.py 10 ./build/cpp data/first data/second data/first_uniq data/second_uniq data/common
-./median_run.py 10 ./build/cpp_jemalloc data/first data/second data/first_uniq data/second_uniq data/common
-./median_run.py 10 ./build/cpp_absl data/first data/second data/first_uniq data/second_uniq data/common
-./median_run.py 10 ./build/cpp_absl_jemalloc data/first data/second data/first_uniq data/second_uniq data/common
-./median_run.py 10 ./build/rust data/first data/second data/first_uniq data/second_uniq data/common
-./median_run.py 10 ./build/rust_jemalloc data/first data/second data/first_uniq data/second_uniq data/common
-./median_run.py 10 ./build/rust_ahash data/first data/second data/first_uniq data/second_uniq data/common
-./median_run.py 10 ./build/rust_ahash_jemalloc data/first data/second data/first_uniq data/second_uniq data/common
+for binary in $(ls build/*); do
+    echo $binary
+    ./median_run.py 10 $binary data/first data/second data/first_uniq data/second_uniq data/common
+done
 ```
